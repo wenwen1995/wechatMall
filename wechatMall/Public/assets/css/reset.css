@@ -1,0 +1,111 @@
+/* css reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+body,
+html {
+  width: 100%;
+  font-family: "Microsoft YaHei", "Helvetica Neue", Arial, HelveticaNeue, Helvetica, "BBAlpha Sans", sans-serif;
+  font-weight: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: center;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+
+li {
+  list-style: none;
+}
+
+a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
+  color: #111;
+}
+
+fieldset,
+img {
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  font-size: 0;
+  display: block;
+  clear: both;
+  height: 0;
+  content: '';
+}
+/*底部固定菜单*/
+.menu{
+  width: 7.5rem;
+  height: 1.4rem;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  border-top:.02rem solid #eee;
+  z-index: 888;
+}
+.menuList{
+  width: 6.8rem;
+  margin: 0 auto;
+  padding-top: .3rem;
+}
+.menuList li{
+  float: left;
+}
+.menuList li:not(:last-child){
+  margin-right: 1.4rem;
+}
+.menuList li a img{
+  width: .5rem;
+  height: .5rem;
+}
+.menuList li a p{
+  font-size: .28rem;
+    color: #66B577;
+}
+.empty{
+  height: 1.4rem;
+}
+.number{
+  width: .4rem;
+  height: .4rem;
+  line-height: .4rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  background: red;
+  border-radius: 50%;
+  font-size: .3rem;
+  left: .3rem;
+  position: absolute;
+  display: none;
+}
+

@@ -1,0 +1,666 @@
+[ 2017-04-17T08:24:16+08:00 ] 127.0.0.1 /wechatMall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000450s ]
+INFO: [ app_init ] --END-- [ RunTime:0.022571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.093154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.097006s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.0252s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad` WHERE ( status = 1 )  [ RunTime:0.0294s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weixin_ad` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001519s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005055s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.347510s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.349870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.048704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.051616s ]
+
+[ 2017-04-17T08:55:15+08:00 ] 127.0.0.1 /wechatMall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000397s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005453s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.0593s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad` WHERE ( status = 1 )  [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weixin_ad` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001283s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003513s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.244626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.246855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003722s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006876s ]
+
+[ 2017-04-17T09:51:42+08:00 ] 127.0.0.1 /wechatMall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000470s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005425s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.2412s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad` WHERE ( status = 1 )  [ RunTime:0.0538s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weixin_ad` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001983s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004942s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.222862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.225356s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006672s ]
+
+[ 2017-04-17T09:54:05+08:00 ] 127.0.0.1 /wechatMall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000397s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003940s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005241s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.0076s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad` WHERE ( status = 1 )  [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weixin_ad` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003469s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.188758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.191722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002729s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005514s ]
+NOTIC: [8] Undefined index: timestamp F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 205 行.
+NOTIC: [8] Undefined index: nonce F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 205 行.
+NOTIC: [8] Undefined index: signature F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 206 行.
+
+[ 2017-04-17T09:55:12+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Detail/detail/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000419s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005652s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0078s ]
+SQL: SELECT `id`,`name`,`img`,`price`,`brief` FROM `item` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0592s ]
+SQL: SHOW COLUMNS FROM `item_img` [ RunTime:0.0398s ]
+SQL: SELECT `url` FROM `item_img` WHERE `item_id` = 3  [ RunTime:0.1004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001270s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003414s ]
+NOTIC: [8] Undefined variable: aa F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\8353e525594791380f28a6bb7ab039bd.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.176425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.179275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007893s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.036750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.039921s ]
+
+[ 2017-04-17T09:55:15+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/add_cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000398s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004856s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0076s ]
+SQL: SELECT `id`,`name`,`img`,`price` FROM `item` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2017-04-17T09:55:16+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/add_cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000403s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004921s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0911s ]
+SQL: SELECT `id`,`name`,`img`,`price` FROM `item` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-04-17T09:55:17+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/All/all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000402s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005716s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `item` WHERE ( type = 0 )  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `item` WHERE ( type = 1 )  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `item` WHERE ( type = 2 )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003425s ]
+NOTIC: [8] Undefined variable: searchGoods F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\3f2d8c8b1653ebd43a12354051aa0fa6.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.240730s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.242929s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003018s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005736s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005171s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008037s ]
+
+[ 2017-04-17T09:55:58+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/All/getKeywords.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000417s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005136s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `item` WHERE `name` LIKE '%%'  [ RunTime:0.1156s ]
+
+[ 2017-04-17T09:55:58+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000393s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005331s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003413s ]
+NOTIC: [8] Undefined index: name F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\e6d5ffd3f373e09d581ce6b44a64e7d4.php 第 22 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.143619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.145832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002645s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004876s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002994s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005122s ]
+
+[ 2017-04-17T09:56:01+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/All/all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000420s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003956s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005797s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `item` WHERE ( type = 0 )  [ RunTime:0.1405s ]
+SQL: SELECT * FROM `item` WHERE ( type = 1 )  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `item` WHERE ( type = 2 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001580s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004181s ]
+NOTIC: [8] Undefined variable: searchGoods F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\3f2d8c8b1653ebd43a12354051aa0fa6.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.234677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.237483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005406s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003864s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006031s ]
+
+[ 2017-04-17T09:56:59+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Person/person.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000393s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005369s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003373s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106217s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004762s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003217s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005525s ]
+
+[ 2017-04-17T09:57:03+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000681s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008055s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.0074s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad` WHERE ( status = 1 )  [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weixin_ad` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003594s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.171675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.173973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005190s ]
+NOTIC: [8] Undefined index: timestamp F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 205 行.
+NOTIC: [8] Undefined index: nonce F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 205 行.
+NOTIC: [8] Undefined index: signature F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 206 行.
+
+[ 2017-04-17T09:57:07+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000406s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003632s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004576s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003115s ]
+NOTIC: [8] Undefined index: name F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\e6d5ffd3f373e09d581ce6b44a64e7d4.php 第 22 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.123083s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.124825s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002698s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004387s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002851s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004549s ]
+
+[ 2017-04-17T09:57:07+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000459s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006626s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001302s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003487s ]
+NOTIC: [8] Undefined index: name F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\e6d5ffd3f373e09d581ce6b44a64e7d4.php 第 22 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111624s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005632s ]
+
+[ 2017-04-17T09:57:11+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/minus.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000409s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006118s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0077s ]
+SQL: SELECT `id`,`name`,`price` FROM `item` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003265s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005089s ]
+
+[ 2017-04-17T09:57:13+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Address/addaddress.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000401s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005816s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003499s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.113454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003552s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005832s ]
+
+[ 2017-04-17T09:57:27+08:00 ] 127.0.0.1 /wechatMall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000444s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006240s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.0073s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad` WHERE ( status = 1 )  [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weixin_ad` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001346s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003876s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.159428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.161659s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005173s ]
+
+[ 2017-04-17T10:07:57+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/All/all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000417s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004865s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `item` WHERE ( type = 0 )  [ RunTime:0.0014s ]
+SQL: SELECT * FROM `item` WHERE ( type = 1 )  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `item` WHERE ( type = 2 )  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001392s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004018s ]
+NOTIC: [8] Undefined variable: searchGoods F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\3f2d8c8b1653ebd43a12354051aa0fa6.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.236090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.238317s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004956s ]
+
+[ 2017-04-17T10:08:36+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/All/all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000408s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003902s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005935s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `item` WHERE ( type = 0 )  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `item` WHERE ( type = 1 )  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `item` WHERE ( type = 2 )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001324s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003714s ]
+NOTIC: [8] Undefined variable: searchGoods F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\3f2d8c8b1653ebd43a12354051aa0fa6.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.235088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.237675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005798s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004961s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008145s ]
+
+[ 2017-04-17T10:33:24+08:00 ] 127.0.0.1 /wechatMall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000412s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007735s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.0249s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad` WHERE ( status = 1 )  [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weixin_ad` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001323s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.156732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.158927s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004399s ]
+NOTIC: [8] Undefined index: timestamp F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 205 行.
+NOTIC: [8] Undefined index: nonce F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 205 行.
+NOTIC: [8] Undefined index: signature F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 206 行.
+
+[ 2017-04-17T10:33:29+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/All/all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000938s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004445s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `item` WHERE ( type = 0 )  [ RunTime:0.0283s ]
+SQL: SELECT * FROM `item` WHERE ( type = 1 )  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `item` WHERE ( type = 2 )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001321s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003590s ]
+NOTIC: [8] Undefined variable: searchGoods F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\3f2d8c8b1653ebd43a12354051aa0fa6.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.196323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.198827s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003166s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005298s ]
+
+[ 2017-04-17T10:33:34+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/All/all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000390s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002160s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004296s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `item` WHERE ( type = 0 )  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `item` WHERE ( type = 1 )  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `item` WHERE ( type = 2 )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001387s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003764s ]
+NOTIC: [8] Undefined variable: searchGoods F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\3f2d8c8b1653ebd43a12354051aa0fa6.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.192476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.194599s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004523s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004792s ]
+
+[ 2017-04-17T10:33:45+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Detail/detail/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000386s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004439s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0078s ]
+SQL: SELECT `id`,`name`,`img`,`price`,`brief` FROM `item` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `item_img` [ RunTime:0.0837s ]
+SQL: SELECT `url` FROM `item_img` WHERE `item_id` = 8  [ RunTime:0.0049s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003356s ]
+NOTIC: [8] Undefined variable: aa F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\8353e525594791380f28a6bb7ab039bd.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102373s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002634s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005448s ]
+
+[ 2017-04-17T10:33:48+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/add_cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000390s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003680s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0077s ]
+SQL: SELECT `id`,`name`,`img`,`price` FROM `item` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2017-04-17T10:33:48+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/add_cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000389s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003641s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0076s ]
+SQL: SELECT `id`,`name`,`img`,`price` FROM `item` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2017-04-17T10:33:49+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/add_cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000395s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004615s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0076s ]
+SQL: SELECT `id`,`name`,`img`,`price` FROM `item` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2017-04-17T10:33:49+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000404s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004732s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003390s ]
+NOTIC: [8] Undefined index: name F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Runtime\Cache\Home\e6d5ffd3f373e09d581ce6b44a64e7d4.php 第 22 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005074s ]
+
+[ 2017-04-17T10:33:53+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Shopcart/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000391s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003674s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0076s ]
+SQL: SELECT `id`,`name`,`price` FROM `item` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined offset: 8 F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\Application\Home\Common\Cart.class.php 第 61 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004430s ]
+
+[ 2017-04-17T10:33:54+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Person/person.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000387s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004281s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003397s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002548s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004694s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005048s ]
+
+[ 2017-04-17T10:33:57+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Address/address.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000599s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004372s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0493s ]
+SQL: SELECT * FROM `user`  [ RunTime:0.0087s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001229s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003354s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.155563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.157761s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004813s ]
+
+[ 2017-04-17T10:34:03+08:00 ] 127.0.0.1 /wechatMall/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000641s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003793s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004717s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.0076s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad` WHERE ( status = 1 )  [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weixin_ad` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003409s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.149387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.151556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002237s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004352s ]
+NOTIC: [8] Undefined index: timestamp F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 205 行.
+NOTIC: [8] Undefined index: nonce F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 205 行.
+NOTIC: [8] Undefined index: signature F:\BaiduYunDownload\PHP\wampserver\wamp\www\wechatMall\ThinkPHP\Library\Com\Wechat.class.php 第 206 行.
+
+[ 2017-04-17T11:00:33+08:00 ] 127.0.0.1 /wechatMall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000400s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004898s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.0644s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad` WHERE ( status = 1 )  [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weixin_ad` WHERE ( status = 1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0422s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0413s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001476s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004374s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.186467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.188870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004378s ]
+
+[ 2017-04-17T14:09:48+08:00 ] ::1 /wechatmall/index.php/home/detail/detail/id/14.html
+ERR: Think\Controller:_404方法不存在！
+

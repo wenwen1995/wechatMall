@@ -1,0 +1,21 @@
+[ 2017-04-12T11:50:52+08:00 ] ::1 /wechatMall/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000773s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004773s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004951s ]
+SQL: SHOW COLUMNS FROM `weixin_ad` [ RunTime:0.0995s ]
+SQL: SELECT `url`,`ad_img`,`desc1`,`desc2` FROM `weixin_ad`  [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `item` [ RunTime:0.0313s ]
+SQL: SELECT * FROM `item` WHERE ( hot=1 and status =1 )  [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001300s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003465s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.156038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.158223s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004570s ]
+

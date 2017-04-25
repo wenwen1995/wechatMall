@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>爱丽小屋之地址列表页面</title>
+    <link rel="stylesheet" type="text/css" href="__css__/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="__css__/reset.css">
+    <link rel="stylesheet" type="text/css" href="__css__/address.css">
+</head>
+<body>
+    <div class="wrap">
+        <p class="title">我的收货地址</p>
+        <!-- 收获信息 --> 
+        <div class="add">
+            <a href="{:U('Address/addaddress')}">新增地址</a>
+        </div>
+        <input type="hidden" value="{$id}" name='id' >
+        <volist name="address_list" id="vo">
+            <div class="addressInfo" id="{$vo.id}">
+                <div class="info info1 clearfix">
+                    <p>姓名:</p>
+                    <span>{$vo.name}</span>
+                </div>
+                <div class="info info2 clearfix">
+                    <p>手机:</p>
+                    <span>{$vo.phone}</span>
+                </div>
+                <div class="info info3 clearfix">
+                    <p>地址:</p>
+                    <span>{$vo.address}</span>
+                </div>
+                <div class="foot clearfix">
+                    <!-- 编辑地址 -->
+                    <a href="{:U('Address/editAddress',array('id'=>$vo['id']))}" class="edit">
+                        <div>编辑</div>
+                    </a>
+                    <!-- 删除地址 -->
+                    <a href="{:U('Address/address',array('id'=>$vo['id'],'type'=>'del'))}" class="delete">
+                        <div>删除</div>
+                    </a>
+                </div>
+            </div>
+        </volist>
+        <!-- 页面底部 -->
+        <include file="./Public/common/footer.html" />
+    </div>
+</body>
+</html>

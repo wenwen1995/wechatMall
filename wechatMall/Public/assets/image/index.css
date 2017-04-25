@@ -1,0 +1,89 @@
+/*轮播图底部按钮重写样式*/
+.carousel-indicators .active {
+    width: 20px;
+    height: 12px;
+    margin: 0;
+    background-color: #66b577;
+    border: 1px solid #66b577;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff \9;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.carousel-inner > .item > img{
+  width: 7.5rem;
+  height: 3.74rem;
+}
+.carousel-control {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: 25px;
+    height: 90px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 90px;
+    color: #ffffff;
+    text-align: center;
+}
+/*游戏项目*/
+.gameItem{
+  width: 7.5rem;
+  margin: .1rem;
+}
+.game{
+  width: 3.6rem;
+  height: 1.8rem;
+  float: left;
+  margin: 0 .1rem .1rem 0;
+}
+.moreBtn{
+  width: 100%;
+  height: .8rem;
+  line-height: .8rem;
+  background: #66b577;
+  font-size: .28rem;
+  color: #fffeff;
+  text-align: center;
+}
+.newsHeader{
+  background: url(../i/newsHeader.png) 0 0 no-repeat;
+  background-size: cover;
+  width: 7.5rem;
+  height: .95rem;
+}
+/*主页新闻样式*/
+.newsItem:first-child{
+  margin-top: .2rem;
+}
+.newsItem{
+  width: 7.25rem;
+  height: .75rem;
+  line-height: .75rem;
+  border-radius: .1rem;
+  background: #ededed;
+  text-align: left;
+  font-size: .28rem;
+  margin: 0 auto;
+  margin-bottom: .1rem;
+}
+.time{
+  color: #66b577;
+  padding: 0 .25rem 0 .2rem;
+}
+.newsItem a{
+  color: #345a53;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 6.6rem;
+  display: block;
+  text-overflow: ellipsis;
+}

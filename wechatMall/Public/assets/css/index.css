@@ -1,0 +1,168 @@
+body{
+  overflow-x: hidden;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+/*头部*/
+.header{
+  height: 1rem;
+  padding: .2rem;
+}
+.headerTitle{
+  font-size: .38rem;
+  color: #111;
+  font-weight: bolder;
+  text-align: left;
+}
+/*轮播图底部按钮重写样式*/
+.carousel-indicators .active {
+    width: 20px;
+    height: 12px;
+    margin: 0;
+    background-color: #66b577;
+    border: 1px solid #66b577;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff \9;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.carousel-inner > .item > img{
+  width: 7.5rem;
+  height: 3.74rem;
+}
+.carousel-control {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: 25px;
+    height: 90px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 90px;
+    color: #ffffff;
+    text-align: center;
+}
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .0001) 100%);
+  background-image:      -o-linear-gradient(left, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .0001) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, .5)), to(rgba(255, 255, 255, .0001)));
+  background-image:         linear-gradient(to right, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .0001) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, .0001) 0%, rgba(255, 255, 255, .5) 100%);
+  background-image:      -o-linear-gradient(left, rgba(255, 255, 255, .0001) 0%, rgba(255, 255, 255, .5) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, .0001)), to(rgba(255, 255, 255, .5)));
+  background-image:         linear-gradient(to right, rgba(255, 255, 255, .0001) 0%, rgba(255, 255, 255, .5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #fff;
+  text-decoration: none;
+  filter: alpha(opacity=90);
+  outline: 0;
+  opacity: .9;
+}
+.swiper-slide{
+  padding-top: .5rem;
+}
+.swiper-slide a {
+  display: block;
+  float: left;
+}
+.swiper-slide a:first-child{
+  padding: 0 .6rem 0 .5rem;
+}
+.swiper-slide a img{
+  width: 3rem;
+  height: 3.5rem;
+}
+.line1,.line2{
+  position: absolute;
+  color: #fff;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.line1{
+  font-size: .35rem;
+  top: 25%;
+}
+.line2{
+  font-size: .28rem;
+  top: 45%;
+}
+/*swiper的按钮*/
+.pagination{
+    text-align: center;
+    margin: 0 0 .4rem 0;
+}
+.swiper-pagination-bullet-active{
+  opacity: 1;
+  background: #66B577;
+}
+.star{
+  background:url(../image/star.jpg) 0 0 no-repeat;
+  background-size: cover;
+  width: .95rem;
+  height: .23rem;
+  margin: 0 auto;
+}
+.goodsItem p{
+  text-align: center;
+  margin: .15rem 0;
+}
+.price{
+  font-size: .26rem;
+  color: #B5B5B5;
+}
+.title{
+  font-size: .3rem;
+  color: #111;
+}
+/*介绍*/
+.intro{
+  background: #EDEEF0;
+  height: 3.5rem;
+  padding: 1rem;
+}
+.intro p{
+  text-align: center;
+}
+.aboutUs{
+  font-size: .32rem;
+  font-weight: bold;
+  color: #454545;
+}
+.summary{
+  font-size: .26rem;
+  color: #999;
+}
+/*页面底部*/
+.footer{
+  width: 7.5rem;
+  padding: .3rem;
+  background: #333;
+  color: #8D8D8D;
+  text-align: center;
+}
+.footer p{
+  display: inline-block;
+  font-size: .18rem;
+  margin: 0;
+}

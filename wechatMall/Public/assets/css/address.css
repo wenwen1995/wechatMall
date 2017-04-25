@@ -1,0 +1,77 @@
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.title{
+  font-size: .34rem;
+  text-align: center;
+  padding:.4rem 0;
+}
+.info{
+	height: 1.4rem;
+	padding: .5rem .6rem;
+	border-bottom: .02rem solid #eee;
+}
+.info span{
+	padding-left: .3rem;
+	float: left;
+}
+.info p{
+	float: left;
+	text-align: left;
+}
+.info1{
+	border-top: .02rem solid #eee;
+}
+.info3{
+	height: 2rem;
+}
+.info input{
+	margin-left: .2rem;
+	width: 3.5rem;
+	line-height: .5rem;
+}
+.info span.vali{
+	font-size: .2rem;
+	color: red;
+	padding-left: .2rem;
+	display: none;
+	float: none;
+}
+.submit,.add{
+	width: 6.5rem;
+	height: .8rem;
+	line-height: .8rem;
+	text-align: center;
+	background:#66B577;
+	margin: 0 auto;
+	margin-bottom: .3rem;
+	border-radius: .1rem;
+	display: block;
+}
+.submit{
+	margin-top:.4rem;
+}
+.addressInfo{
+	padding-bottom: .3rem;
+}
+.edit,.delete{
+	float: left;
+	display: block;
+	width: 3rem;
+	height: .8rem;
+	line-height: .8rem;
+	color: #fff;
+	text-align: center;
+	background:#66B577;
+	margin: 0 auto;
+	margin-top: .6rem;
+	border-radius: .1rem;
+}
+.foot{
+	width: 6.5rem;
+	margin:0 auto;
+}
+.edit{
+ margin-right: .5rem;
+}

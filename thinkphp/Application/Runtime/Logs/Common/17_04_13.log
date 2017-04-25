@@ -1,0 +1,12 @@
+[ 2017-04-13T15:55:14+08:00 ] ::1 /thinkphp/index.php/Public/common/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000448s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004239s ]
+ERR: 无法加载模块:Public
+
+[ 2017-04-13T15:55:24+08:00 ] ::1 /thinkphp/index.php/page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000424s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004175s ]
+ERR: 无法加载模块:Page
+

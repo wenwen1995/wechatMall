@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>后台管理之广告信息添加界面</title>
+    <link href="__ROOT__/uploadify/uploadify.css" rel="stylesheet" />
+    <link href="__css__/info.css" rel="stylesheet" />
+</head>
+<body>
+<p>{$_SESSION['admin_info']}</p>
+    <div id="wrapper">
+        <!-- 页面底部 -->
+        <include file="./Public/common/page.html" />
+        
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <!-- 广告图管理 -->
+                <div class="ad">
+                    <div class="row" >
+                        <div class="col-md-12">
+                         <h2>广告图管理</h2>
+                         <hr />
+                        </div>
+                    </div>
+                    <!-- 广告图管理具体内容 -->
+                    <div class="adManage col-md-12">
+                        <form  method="post" id="adInfoForm" >
+                            <div class="adInfo clearfix">
+                                <p>广告图名称：</p>
+                                <input type="text" name="adName" class="adName" id="adName" required>
+                            </div>
+                            <div class="adInfo clearfix">
+                                <p>广告图图片：</p> 
+                                <input id="file_upload" name="file_upload" type="file" multiple="true" value="" required />
+                                <div class="view">
+                                    <img class="img" id="img" src="http://www.thinkphp.cn/Public/new/img/header_logo.png"  />
+                                </div>
+                                <input name="hideImgSrc" id="hideImgSrc" value="" type="hidden">
+                            </div>
+                            <div class="adInfo clearfix">
+                                <p>广告图描述1：</p>
+                                <input type="text" name="desc1" class="desc1" id="desc1" required>
+                            </div>
+                            <div class="adInfo clearfix">
+                                <p>广告图描述2：</p>
+                                <input type="text" name="desc2" class="desc2" id="desc2" required>
+                            </div>
+                            <div class="adInfo clearfix">
+                                <p>推荐状态：</p>
+                                <select required id="myselect" name="myselect">
+                                    <option value="2">选择状态</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                </select>
+                            </div>
+                            <div class="adInfo clearfix">
+                                <p>图片跳转链接：</p>
+                                <input type="text" name="gourl" class="gourl" id="gourl" required>
+                            </div>
+                            <input type="submit" class="submit" value="提交">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="__js__/lib/jquery.validate.min.js"></script>
+    <script src="__ROOT__/uploadify/jquery.uploadify.min.js"></script>
+    <script>
+        var adurl = "{:U('Page/adPage')}";
+        var root = '__ROOT__/';
+        var adUpUrl = "{:U('Page/adUploadify')}";
+    </script>
+    <script src="__js__/base.js"></script>
+    <script src="__js__/adPage.js"></script>
+</body>
+</html>

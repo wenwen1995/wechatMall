@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  	<title>爱丽小屋之商品详情页</title>
+  	<link rel="stylesheet" type="text/css" href="__css__/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="__css__/reset.css">
+    <link rel="stylesheet" type="text/css" href="__css__/detail.css">
+</head>
+<body>
+<!-- <p>{$item.name}{$item.brief}{$item.price}</p> -->
+	<!-- <p>{$aa}</p> -->
+	<div class="wrap">
+		<!-- 商品详情 -->
+		<p class="detailTitle">商品详情</p>
+		<div class="detail" >
+			<input  value="{$item.id}" type="hidden" id="goodsId"/>
+			<volist name="img_list" id="img">
+				<img class="bigImg" src="/thinkphp/uploads/items/{$img['url']}"/>
+			</volist>
+			<p class="goodsTitle">{$item.name}</p>
+            <p class="brief">{$item.brief}</p>
+			<div class="price">¥<span class="unitPrice">{$item.price}</span></div>
+			<div class="addToCart">添加到购物车</div>
+		</div>
+	</div>
+    <!-- 页面底部 -->
+    <include file="./Public/common/footer.html" />
+	<!-- 引入的插件 -->
+  	<script src="__js__/lib/jquery-1.8.3.min.js"></script>
+
+	<script>
+  		var url = "{:U('Shopcart/add_cart')}";
+	</script>
+  	<script src="__js__/detail.js"></script>
+</body>
+</html>

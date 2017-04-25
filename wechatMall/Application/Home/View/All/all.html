@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  	<title>爱丽小屋全部商品</title>
+  	<link rel="stylesheet" type="text/css" href="__css__/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="__css__/reset.css">
+    <link rel="stylesheet" type="text/css" href="__css__/all.css">
+</head>
+<body>
+	<div class="wrap">
+		<!-- 搜索框 -->
+		<div class="search clearfix">
+			<form method="post">
+				<input type="text" class="searchInput" name="key">
+				<div class="searchIcon"></div>
+			</form>
+		</div>
+		<!-- 全部商品展示 -->
+		<p>{$searchGoods}</p>
+		<div class="all">
+			<!--顶部分类标题 -->
+			<div class="typeList">
+				<ul class="clearfix">
+					<li class="highlight">衣服区</li>
+					<li>帽子区</li>
+					<li>皮包区</li>
+				</ul>
+			</div>
+			<!-- 具体内容显示 -->
+			<div class="showGoods clearfix">
+				<!-- 衣服区  -->
+				<div class="clothesArea">
+					<volist name="clothes" id="clothes">
+						<div class="project">
+							<div class="showImg">
+								<a href="{:U('Detail/detail',array('id'=>$clothes['id']))}">
+									<img src="/thinkphp/uploads/items/{$clothes.img}">
+								</a>
+							</div>
+							<div class="descri">
+								<p class="title">{$clothes.name}</p>
+								<img src="__img__/star.jpg" class="star">
+								 <p class="price">￥<span class="money">{$clothes.price}</span></p>
+								 <p class="info">
+								 	<span class="already">{$clothes.alreadybuy}</span>人购买
+								 	<span class="city">{$clothes.city}</span>
+
+								 </p>
+							</div>
+						</div>
+					</volist>
+				</div>
+				<!-- 帽子区  -->
+				<div class="capArea">
+					<volist name="caps" id="caps">
+						<div class="project">
+							<div class="showImg">
+								<a href="{:U('Detail/detail',array('id'=>$caps['id']))}">
+									<img src="/thinkphp/uploads/items/{$caps.img}">
+								</a>
+							</div>
+							<div class="descri">
+								<p class="title">{$caps.name}</p>
+								<img src="__img__/star.jpg" class="star">
+								 <p class="price">￥<span class="money">{$caps.price}</span></p>
+								 <p class="info">
+								 	<span class="already">{$caps.alreadybuy}</span>人购买
+								 	<span class="city">{$caps.city}</span>
+
+								 </p>
+							</div>
+						</div>
+					</volist>
+				</div>
+				<!-- 皮包区 -->
+				<div class="bagsArea">
+					<volist name="bags" id="bags">
+						<div class="project">
+							<div class="showImg">
+								<a href="{:U('Detail/detail',array('id'=>$bags['id']))}">
+									<img src="/thinkphp/uploads/items/{$bags.img}">
+								</a>
+							</div>
+							<div class="descri">
+								<p class="title">{$bags.name}</p>
+								<img src="__img__/star.jpg" class="star">
+								 <p class="price">￥<span class="money">{$bags.price}</span></p>
+								 <p class="info">
+								 	<span class="already">{$bags.alreadybuy}</span>人购买
+								 	<span class="city">{$bags.city}</span>
+
+								 </p>
+							</div>
+						</div>
+					</volist>
+				</div>
+			</div>
+		</div>
+		<!-- 页面底部 -->
+ 		<include file="./Public/common/footer.html" />
+	</div>
+
+	<script>
+		var url = "{:U('All/getKeywords')}";
+	</script>
+  	<script src="__js__/all.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>爱丽小屋之收货地址</title>
+  	<link rel="stylesheet" type="text/css" href="__css__/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="__css__/reset.css">
+    <link rel="stylesheet" type="text/css" href="__css__/address.css">
+</head>
+<body>
+	<div class="wrap">
+		<p class="title">收货地址</p>
+		<!-- 收获信息 -->
+        <div class="addressInfo">
+            <form method="post" action="{:U('Address/addaddress')}">
+                <div class="info info1">
+                    <span class="name">姓名:</span>
+                    <input type="text" class="nameInput" name="nameInput">
+                    <span class="vali"></span>
+                </div>
+                <div class="info info2">
+                    <span class="name">手机:</span>
+                    <input type="text" class="phoneInput" name="phoneInput">
+                    <span class="vali"></span>
+                </div>
+                <div class="info info3">
+                    <span class="name">地址:</span>
+                    <input type="text" class="addrInput" name="addrInput">
+                    <span class="vali"></span>
+                </div>
+                <!-- 提交订单 -->
+                 <input type="submit" value="提交" class="submit">
+            </form>
+        </div>
+	</div>
+    <!-- 页面底部 -->
+    <include file="./Public/common/footer.html" />
+
+  	<script src="__js__/address.js"></script>
+</body>
+</html>

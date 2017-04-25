@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>爱丽小屋之个人页</title>
+  	<link rel="stylesheet" type="text/css" href="__css__/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="__css__/reset.css">
+    <link rel="stylesheet" type="text/css" href="__css__/person.css">
+</head>
+<body>
+    <?php if(count($_SESSION['userinfo']) == 0) {?>
+    <script>
+         window.reload();
+     </script>
+    <?php }else{ ?>
+	<div class="wrap">
+		<p class="title">我</p>
+		<!-- 个人内容 -->
+        <div class="aboutMe">
+            <img class="meImg" src="{$avatar}">
+            <p class="type">基础会员</p>
+            <div class="allLine">
+                <div class="line line1">我的昵称：
+                    <span class="name">{$nickname}</span>
+                </div>
+                <div class="line line2">我的性别：
+                    <if  condition="$sex eq 2">
+                        <span class="points">女</span>
+                        <else />
+                        <span class="points">男</span>
+                    </if>
+                </div>
+                <a href="{:U('Address/address')}">
+                    <div class="line line2">我的地址
+                        <span class="arrow">></span>
+                    </div>
+                </a>
+                <div class="line line2">我的家乡：
+                    <span class="account">{$location}</span>
+                </div>
+            </div>
+        </div>
+        <!-- 页面底部 -->
+        <include file="./Public/common/footer.html" />
+	</div>
+    <?php } ?>
+</body>
+</html>

@@ -1,0 +1,98 @@
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.title{
+  font-size: .34rem;
+  /*font-weight: bold;*/
+  text-align: center;
+  padding:.2rem 0 .6rem 0;
+}
+.line{
+  padding: 0 .2rem;
+}
+/*订单详情*/
+.orderTitle{
+  padding-bottom: .1rem;
+  font-size: .44rem;
+  color: #66B577;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: .02rem solid #111;
+}
+.orderItem{
+  width: 6rem;
+  margin: 0 auto;
+  padding: .5rem 0;
+  border-bottom: .02rem solid #eee;
+}
+.orderItem p,.orderItem div{
+  float: left;
+}
+.goodsTitle{
+    font-size: .3rem;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+.amount > div{
+  font-size: .38rem;
+}
+.pri{
+    color: #78A3EE;
+    font-size: .34rem;
+    position: absolute;
+    right: 3.9rem;
+}
+.minus{
+  padding-right: .2rem;
+}
+.plus{
+  padding-left: .2rem;
+}
+.result{
+  border-left:.02rem solid #eee;
+  border-right:.02rem solid #eee;
+  width: .5rem;
+  text-align: center;
+}
+.delete{
+  background: url(../image/delete.png) 0 0 no-repeat;
+  background-size: cover;
+  width: .32rem;
+  height: .32rem;
+  position: absolute;
+  right: 0.7rem;
+  margin-top: .1rem;
+}
+.amount{
+  position: absolute;
+  right: 1.7rem;
+}
+/*总价*/
+.all{
+    color: red;
+    font-weight: bold;
+    font-size: .42rem;
+    text-align: right;
+    padding: .4rem .8rem;
+}
+.next{
+    width: 6rem;
+    height: .8rem;
+    line-height: .8rem;
+    background:#66B577;
+    font-size: .32rem;
+    color: #fff;
+    border-radius: .06rem;
+    text-align: center; 
+    margin: 0 auto;
+}
+.null_shopping{
+  text-align: center;
+  padding-top: 2.5rem;
+  font-size: .36rem;
+}
+.null_shopping p a{
+  color: mediumaquamarine;
+  font-size: .4rem;
+}

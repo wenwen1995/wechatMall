@@ -1,0 +1,72 @@
+[ 2017-04-17T09:33:15+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000397s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003728s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:34:27+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000409s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004944s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:35:43+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechatCallbackapiTest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000418s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003703s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:35:48+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechat/CallbackapiTest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000398s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003669s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:36:18+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechat/CallbackapiTest?signature=357aac131759dbcae4c822d3e9f093169dee661e&echostr=6123285032858451863&timestamp=1492392855&nonce=226650600
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000399s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003616s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:36:21+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechat/CallbackapiTest?signature=28aa06114b6725a7b21a8520d4d7afee5ab42c40&echostr=3528795726685241279&timestamp=1492392858&nonce=396342983
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000404s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004078s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:36:34+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechat/CallbackapiTest?signature=b5a6468e81ee1ba4105f8652496b9c26634f676f&echostr=2518978542356659111&timestamp=1492392871&nonce=108435555
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000627s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005595s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:36:54+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechatCallbackapiTest?signature=bd60eaccc3bba3d6225cbfa93c29eb7f7db275fd&echostr=6061520250115333115&timestamp=1492392891&nonce=885606221
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000406s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004369s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:37:11+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechatCallbackapiTest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000404s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003660s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:37:26+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechatCallbackapiTest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000447s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004139s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:37:26+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechatCallbackapiTest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000409s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004189s ]
+ERR: 无法加载模块:Wechat
+
+[ 2017-04-17T09:37:27+08:00 ] 127.0.0.1 /wechatMall/index.php/wechat/wechatCallbackapiTest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000528s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005395s ]
+ERR: 无法加载模块:Wechat
+

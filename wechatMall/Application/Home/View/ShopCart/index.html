@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>爱丽小屋之购物车页</title>
+  	<link rel="stylesheet" type="text/css" href="__css__/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="__css__/reset.css">
+    <link rel="stylesheet" type="text/css" href="__css__/cart.css">
+</head>
+<body>
+	<!-- <p>{$_SESSION['cart']}</p> -->
+	<div class="wrap">
+		<p class="title">购物车</p>
+		<?php if(count($_SESSION['cart']) == 0) {?>
+			<div class="null_shopping">
+				<h4>您还没有宝贝，赶快去逛逛吧！</h4>
+				<p>
+					<a href="/wechatMall/index.php/Home/All/all.html">马上去逛逛</a>
+				</p>
+			</div>
+		<?php }else{ ?>
+			<p>{$item.name}</p>
+			<!-- 订单确认 -->
+			<div class="orderForm">
+				<div class="line">
+					<p class="orderTitle">订单确认</p>
+				</div>
+				<div class="orderDetail">
+					<volist name="item" id="vo">
+						<div class="orderItem clearfix" id="{$vo.id}">
+							<p class="goodsTitle">{$vo.name}</p>
+							<p class="pri">¥<span class="unitPrice">{$vo.price}</span></p>
+							<div class="amount">
+								<div class="minus">-</div>
+								<div class="result">{$vo.num}</div>
+								<div class="plus">+</div>
+							</div>
+							<div class="delete"></div>
+						</div>
+					</volist>
+					<p class="all">总计：¥
+						<span class="allPrice"><?php echo sprintf("%01.2f",$vo['num']*$vo['price']); ?></span>
+						元
+					</p>
+					<div class="next">
+						<a href="{:U('Address/addaddress')}">立即购买</a>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+		<!-- 页面底部 -->
+    	<include file="./Public/common/footer.html" />
+	</div>
+
+    <script>
+  		var minusUrl = "{:U('Shopcart/minus')}";
+  		var plusUrl = "{:U('Shopcart/plus')}";
+  		var delUrl = "{:U('Shopcart/del')}";
+	</script>
+
+  	<script src="__js__/cart.js"></script>
+</body>
+</html>

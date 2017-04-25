@@ -1,0 +1,89 @@
+.wrap{
+	width: 100%;
+	height: 100%;
+}
+.search{
+	padding: .2rem 0; 
+	border-bottom: .05rem dashed #eee;
+}
+.searchInput{
+	width: 5rem;
+    height: .7rem;
+    height: .7rem;
+    border-radius: .1rem;
+    float: left;
+    margin-left: 1rem;
+}
+.searchIcon{
+	background: url(../image/searchIcon.png) 0 0 no-repeat;
+	background-size: cover;
+	width: .6rem;
+	height: .6rem;
+	float: left;
+	margin: .05rem;
+}
+.typeList{
+	border-bottom: .05rem dashed #eee;
+}
+.typeList ul li{
+	float: left;
+	font-size: .35rem;
+	width: 2.5rem;
+  text-align: center;
+  padding: .1rem;
+  border-left: .05rem dashed #eee;
+	border-right: .05rem dashed #eee;
+}
+.typeList ul li.highlight{
+	background: #66B577;
+	color: #fff;
+}
+.showGoods{
+	width: 6.5rem;
+    margin: 0 auto;
+    margin-top: .4rem;
+}
+.showGoods div{
+	float: left;
+}
+.showImg img{
+	width: 3rem;
+	height: 3rem;
+	border-radius: .1rem;
+	border: .05rem solid #EEEEEE;
+	position: relative;
+}
+.descri{
+	margin-left: .5rem;
+}
+.descri p{
+	text-align: left;
+}
+.title{
+	font-size: .3rem;
+    color: #111;
+}
+.price{
+	font-size: .26rem;
+    color: #B5B5B5;
+}
+.info{
+	padding: .5rem 0;
+}
+.already{
+	color: pink;
+	font-size: .3rem;
+}
+.city{
+	padding-left: .2rem;
+    color: lightsalmon;
+}
+.project{
+	margin-bottom: .4rem;
+}
+.star{
+	margin: .4rem 0 .4rem -.2rem;
+}
+.clothesArea,.capArea,.bagsArea{
+	display: none;
+}
