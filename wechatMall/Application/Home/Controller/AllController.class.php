@@ -21,16 +21,22 @@ class AllController extends Controller {
 	public function getKeywords(){
 		// 输入框获取模糊查询结果集
 		$item = M('item');
-		$keywords = I('post.key'); //获取搜索的关键字 
-		// dump($keywords);
-		echo $keywords;
-		// if(isset($keywords) && $keywords!= ''){
-			$where['name'] = array('like','%'.$keywords.'%');
-			$searchGoods = M('item')->where($where)->select();
-			// dump($searchGoods);
-			// $this->assign('searchGoods',$searchGoods);
-			// $this->display();
-		// }
-		$this->ajaxReturn($searchGoods);
+		$keywords = I('post.val'); //获取搜索的关键字 
+		$where['name'] = array('like','%'.$keywords.'%');
+		$result = M('item')->where($where)->select();
+		if(!$result){
+			$data = array(
+			    'status' => 0,
+			    'content' => '抱歉，没有搜索到对应的商品！',
+			    'data' => $result,
+		   );
+		}else{
+			$data = array(
+			    'status' => 1,
+			    'content' => '返回数据成功！',
+			    'data' => $result,
+			);
+		}
+		$this->ajaxReturn($data);
 	}
 }

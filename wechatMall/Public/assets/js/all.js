@@ -11,7 +11,7 @@ $(function(){
         , $searchInput: $('.searchInput')
     };
 var allClick = 1,num = 1;
-var params = [];
+var str,kind;
 
 var oPage = {
 	//init初始化程序
@@ -47,29 +47,63 @@ var oPage = {
                 data: {'val': val}
             })
             .done(function(data) {
+                if(data.status == 0){ 
+                    //表示模糊搜索后没有查找到对应的数据，则提示用户没有搜到合适的结果
+                    $('.showGoods').children().hide();
+                    $('.showGoods').text(data.content).css({
+                        textAlign: 'center',
+                        paddingTop: '3.5rem',
+                        fontSize:'.35rem'
+                    });
+                    window.location.reload();//页面自动重新刷新
+                }else{
+                    //表示模糊搜索后查找到对应的数据，显示对应的结果
+                    console.log(data.data.length);
+                    var html = '';
+                    for(var i=0; i< data.data.length;i++){
+                         var route = '/thinkphp/uploads/items/'+data.data[i].img;
+                         var id = data.data[i].id;
+                         var cloUrl = "/wechatMall/index.php/Home/Detail/detail/id/"+id+".html";
+                         var type = data.data[0].type;//获取得到数据的类型，0表示衣服，1表示帽子，2表示皮包
+                         html += '<div class="project">'+'<div class="showImg">'+
+                                    '<a href='+ cloUrl +'>'+
+                                        '<img src='+ route +' alt="图片">'+
+                                    '</a>'+'</div>'+'<div class="descri">'+'<p class="title">'+ data.data[i].name +'</p>'
+                                    +'<img src="/wechatMall/Public/assets/image/star.jpg" class="star">'+
+                                     '<p class="price">'+'￥'+'<span class="money">'+ data.data[i].price +'</span>'+'</p>'
+                                     +'<p class="info">'+'<span class="already">'+data.data[i].alreadybuy+'</span>'+'人购买'+
+                                    '<span class="city">'+ data.data[i].city +'</span>'+'</p>'+'</div>'+'</div>';
+                        str = html,kind = type;
+                        if(type == 0){//是衣服类型
+                            oPage.changeContent(type);
+                        }else if(type == 1){
+                            oPage.changeContent(type);
+                        }else{
+                            oPage.changeContent(type);
+                        }
+                    }
+                }
                 console.log("success");
                 console.log(data)
             })
             .fail(function() {
-                console.log('出错了！')
+                alert('出错了！')
             })
         });
-        //
-        // ui.$searchInput.on('keyup',function(){
-        //     var val = $(this).val();
-        //     $.ajax({
-        //         url: 'http://localhost/wechatMall/index.php/Home/All/all',
-        //         type: 'POST',
-        //         dataType: 'json',
-        //         data: {'val': val}
-        //     })
-        //     .done(function() {
-        //         console.log("success");
-        //     })
-        //     .fail(function() {
-        //         console.log('出错了！')
-        //     })
-        // });
+    }
+    ,changeContent: function(kind){ //实现搜索到对应的内容后，对应的顶部导航栏高亮和对应的模块显示
+       ui.$typeList.find('ul li').eq(kind).addClass('highlight').siblings().removeClass('highlight');
+       $('.showGoods > div').eq(kind).show().siblings().hide();
+       if(kind == 0){
+          $('.clothesArea').children().hide();
+          $('.clothesArea').append(str).show();
+       }else if(kind == 1){
+          $('.capArea').children().hide();
+          $('.capArea').append(str).show();
+       }else{
+          $('.bagsArea').children().hide();
+          $('.bagsArea').append(str).show();
+       }
     }
 };
    oPage.init();
