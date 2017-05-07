@@ -1,0 +1,199 @@
+[ 2017-05-05T14:34:44+08:00 ] ::1 /thinkphp/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000403s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009730s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1099s ]
+SQL: SELECT * FROM `admin` WHERE `adminname` = '' AND `password` = '' LIMIT 1   [ RunTime:0.0187s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.128725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132079s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007922s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011997s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007272s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010215s ]
+
+[ 2017-05-05T14:34:57+08:00 ] ::1 /thinkphp/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000429s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006905s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `admin` WHERE `adminname` = 'admin' AND `password` = '123456' LIMIT 1   [ RunTime:0.0173s ]
+
+[ 2017-05-05T14:34:57+08:00 ] ::1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000432s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006401s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `admin` WHERE `adminname` = 'admin' AND `password` = '123456' LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2017-05-05T14:34:57+08:00 ] ::1 /thinkphp/index.php/Home/Page/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000397s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005384s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002264s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005284s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.143292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.146187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005829s ]
+
+[ 2017-05-05T14:34:57+08:00 ] ::1 /thinkphp/index.php/Home/Page/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000683s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005708s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001320s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003700s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002972s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006196s ]
+
+[ 2017-05-05T14:35:07+08:00 ] ::1 /thinkphp/index.php/Home/Page/adPage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000424s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005087s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006322s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.213263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.216626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007662s ]
+
+[ 2017-05-05T14:35:11+08:00 ] ::1 /thinkphp/index.php/Home/Page/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000663s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006951s ]
+ERR: 非法操作:index
+
+[ 2017-05-05T14:41:17+08:00 ] ::1 /thinkphp/index.php/Home/Page/goodsPage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000403s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006244s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001947s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.158674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.161890s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007249s ]
+
+[ 2017-05-05T14:41:19+08:00 ] ::1 /thinkphp/index.php/Home/Page/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000400s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004628s ]
+ERR: 非法操作:index
+
+[ 2017-05-05T14:43:40+08:00 ] ::1 /thinkphp/index.php/Home/Page/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000422s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003508s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.129954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003848s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008780s ]
+
+[ 2017-05-05T14:44:29+08:00 ] ::1 /thinkphp/index.php/Home/Page/destory.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000599s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007862s ]
+
+[ 2017-05-05T14:44:29+08:00 ] ::1 /thinkphp/index.php/Home/Page/destory.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000884s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005902s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007908s ]
+NOTIC: [2] session_destroy() [<a href='function.session-destroy'>function.session-destroy</a>]: Session object destruction failed F:\BaiduYunDownload\PHP\wampserver\wamp\www\thinkphp\Application\Home\Controller\PageController.class.php 第 7 行.
+
+[ 2017-05-05T14:44:32+08:00 ] ::1 /thinkphp/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000690s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007352s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `admin` WHERE `adminname` = '' AND `password` = '' LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001257s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003668s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005607s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005705s ]
+

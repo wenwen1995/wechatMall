@@ -1,6 +1,462 @@
 # wechatMall
 ## 基于thinkphp的微信商城 ##
 
+
+**2017年5月7号，续前面所写内容继续更新**
+
+——————**完善了WEB端后台管理系统的功能不足的问题**——————————
+
+原来的后台管理工作只是针对于广告图信息的上传、商品图片的信息的上传，显然这样是不足的。按理来说后台管理也可以看到**数据库表中的所有的广告图信息的列表数据和商品信息的列表数据，然后可以对它们进行对应的修改**，比如商品可以修改其库存、上下架、价格等等。
+
+所以最终实现效果如下：
+
+广告图信息管理：
+
+![](http://om4hi8hop.bkt.clouddn.com/17-5-7/19019151-file_1494120430798_1055b.png)
+
+点击对应的编辑图标，可进行对应内容的修改：
+
+![](http://om4hi8hop.bkt.clouddn.com/17-5-7/6364087-file_1494120433448_a840.png)
+
+商品信息管理（**这里实现了分页！**）：
+
+![](http://om4hi8hop.bkt.clouddn.com/17-5-7/83480337-file_1494120436010_541e.png)
+
+点击对应的编辑图标，可进行对应内容的修改：
+
+![](http://om4hi8hop.bkt.clouddn.com/17-5-7/13774047-file_1494120438525_ff40.png)
+
+效果还不错吧，这里表格样式使用的是bootstrap的：**table-striped**，然后弹出层使用的是bootstrap的**模态框**，分页的效果是仿照网上写的。
+
+![](http://om4hi8hop.bkt.clouddn.com/17-5-7/84704171-file_1494122004841_86d1.png)
+
+这里**Application/Common/Common/function.php**里面是实现分页的方法
+
+**InfoController.class.php**控制器方法里面含有操作广告图信息管理、商品信息管理的方法。
+
+Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.html->商品信息管理页面**
+
+###function.php实现分页的方法：###
+
+    <?php
+	/**
+	 * TODO 基础分页的相同代码封装，使前台的代码更少
+	 * @param $count 要分页的总记录数
+	 * @param int $pagesize 每页查询条数
+	 * @return \Think\Page
+	 */
+
+	function getPage($count,$pagesize=10){
+		$p = new Think\Page($count,$pagesize);
+		$p->setConfig('header','<li class="rows">共<b>%TOTAL_ROW%</b>条记录&nbsp;第<b>%NOW_PAGE%</b>页/共<b>%TOTAL_PAGE%</b>页</li>');
+		$p->setConfig('prev','上一页');
+		$p->setConfig('next','下一页');
+		$p->setConfig('last', '末页');
+	    $p->setConfig('first', '首页');
+	    $p->setConfig('theme','%FIRST%%UP_PAGE%%LINK_PAGE%%DOWN_PAGE%%END%%HEADER%');
+	    $p->lastSuffix = false;//最后一页不显示为总页数
+	    return $p;
+	}
+	?>
+
+
+###控制器中实现商品信息管理页面分页的方法：###
+    
+    //显示商品信息列表
+    public function goodsInfo(){
+      $itemInfo = M('item');
+      $where = "id>10";
+      $count = $itemInfo->where($where)->count();
+      $p = getPage($count,10);//数据每10条进行分页
+      $list = $itemInfo->field(true)->where()->order('id')->limit($p->firstRow,$p->listRows)->select();//将数据列表按id的数据取出
+      $this->assign('item',$list); //赋值数据集
+      $this->assign('page',$p->show());//赋值分页输出
+      $this->display();
+    }
+
+
+###前端分页页面展示：###
+
+     <!-- 分页 -->
+     <div class="page">
+       <div class="pages">
+              {$page}
+       </div>
+     </div>
+
+###对应的css样式：###
+
+    /*分页效果*/
+	.pages{
+		text-align:center;
+	}
+	.rows{
+		padding-left: 20px;
+	}
+	.pages a,.pages span {
+	    display:inline-block;
+	    padding:2px 5px;
+	    margin:0 6px;
+	    border:1px solid #f0f0f0;
+	    -webkit-border-radius:3px;
+	    -moz-border-radius:3px;
+	    border-radius:3px;
+	}
+	.pages a,.pages li {
+	    display:inline-block;
+	    list-style: none;
+	    text-decoration:none; color:#58A0D3;
+	}
+	.pages a.first,.pages a.prev,.pages a.next,.pages a.end{
+	    margin:0;
+	}
+	.pages a:hover{
+	    border-color:#50A8E6;
+	}
+	.pages span.current{
+	    background:#50A8E6;
+	    color:#FFF;
+	    font-weight:700;
+	    border-color:#50A8E6;
+	}
+
+最终分页效果就是如之前的图片所示了，这里分页参考的是这个链接，基本仿照来写的，写的很好很清楚：
+[http://www.cnblogs.com/tianguook/p/4326613.html](http://www.cnblogs.com/tianguook/p/4326613.html)
+
+###控制器中实现点击编辑，显示对应商品信息的方法：###
+
+    //显示对应id的数据内容
+     public function goodsShowOwnInfo(){
+      $itemInfo = M('item');
+      $id = I('post.infoId');
+      $OwnInfo = $itemInfo->find($id);
+      if(!$OwnInfo){
+			$data = array(
+			    'status' => 0,
+			    'content' => '检索信息失败！',
+			    'data' => $result,
+		   );
+		}else{
+			$data = array(
+			    'status' => 1,
+			    'content' => '返回数据成功！',
+			    'data' => $OwnInfo,
+			);
+		}
+		$this->ajaxReturn($data);
+    }
+
+这里前端页面在商品列表展示时，有个**隐藏的包含商品id值的input框**，当点击编辑时，将此id值通过ajax传给后台，后台根据此id值找到唯一的这条记录，并将其返回，通过js将返回的数据渲染在页面上。
+
+###前端页面:###
+
+     <div class="adManage col-md-12">
+                    <table class="table2 table table-striped">
+                      <thead>
+                        <tr>
+                          <th>商品名称</th>
+                          <th>图片名称</th>
+                          <th>商品价格</th>
+                          <th>热销状态</th>
+                          <th>商品类型</th>
+                          <th>商品描述</th>
+                          <th>已买人数</th>
+                          <th>商品产地</th>
+                          <th>上架状态</th>
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <volist name="item" id="vo">
+                            <tr>
+                              <input type="hidden" value="{$vo.id}" class="infoId">
+                              <td class="tdname">{$vo.name}</td>
+                              <td class="tdpicname">{$vo.img}</td>
+                              <td class="tdprice">{$vo.price}</td>
+                              <if condition="($vo.hot eq 1)"> 
+                                  <td class="tdhot">热销</td>
+                                  <else/><td class="tdhot">热销</td>
+                              </if>
+                              <if condition="($vo.type eq 0)"> 
+                                  <td class="tdtype">衣服</td>
+                                  <elseif condition="$name eq 1"/><td class="tdtype">帽子</td>
+                                  <else /><td class="tdtype">皮包</td>
+                              </if>
+                              <td><div class="brief">{$vo.brief}</div></td>
+                              <td>{$vo.alreadybuy}</td>
+                              <td class="tdcity">{$vo.city}</td>
+                              <if condition="($vo.up eq 1)"> 
+                                  <td class="tdup">上架</td>
+                                  <else/><td class="tdup">下架</td>
+                              </if>
+                              <td><img class="edit" src="__img__/edit.png" data-toggle="modal" data-target="#myModal"></td>
+                            </tr>
+                        </volist>
+                      </tbody>
+                    </table>
+                </div>
+                <!-- 分页 -->
+                <div class="page">
+                    <div class="pages">
+                        {$page}
+                    </div>
+                </div>
+
+上述代码中class="infoId"就是含有商品id值的隐藏的input框。
+
+###对应的goodsInfo.js：###
+
+    /*
+    goodsInfo.js
+    by renwenji 
+    2017/05/06
+    功能：实现后台管理之商品信息管理页面
+ 	*/
+	$(function(){
+     var ui = {
+          $edit: $('.edit')
+        , $itemname: $('.itemname')
+        , $itemprice: $('.itemprice')
+        , $itemhot: $('.itemhot')
+        , $itemtype: $('.itemtype') 
+        , $itembrief: $('.itembrief')
+        , $itemcity: $('.itemcity')
+        , $itemup: $('.itemup')
+        , $updateBtn: $('.updateBtn')
+    };
+
+	var id;
+	var oPage = {
+    //init初始化程序
+    init: function() {
+      this.showMask(); //显示遮罩层，每个商品id对应的信息显示在模态框里
+      this.changeInfo();//修改数据
+    }
+    ,showMask:function(){
+       ui.$edit.each(function(){
+        $(this).on('click',function(){
+            var index = $(this).parent().parent().index();//获得td当前所在索引值
+            var infoId = $(this).parent().parent().find('.infoId').val();//获得当前数据在数据库中的id值
+            id = infoId;
+            //实现将每个商品id对应的信息显示在模态框里
+            $.ajax({
+                url: goodsShowOwnInfo,
+                type: 'POST',
+                dataType: 'json',
+                data: {'infoId': infoId}
+            })
+            .done(function(data) {
+                var itemname = data.data.name;
+                var itemprice = data.data.price;
+                var itemhot = data.data.hot;
+                var itemtype = data.data.type;
+                var itembrief = data.data.brief;
+                var itemcity = data.data.city;
+                var itemup = data.data.up;
+                ui.$itemname.val(itemname);
+                ui.$itemprice.val(itemprice);
+                ui.$itemhot.val(itemhot);
+                ui.$itemtype.val(itemtype);
+                ui.$itembrief.val(itembrief);
+                ui.$itemcity.val(itemcity);
+                ui.$itemup.val(itemup);
+                console.log("success");
+            })
+            .fail(function(data) {
+                alert(data.data.content);
+            })
+          });
+       });
+    }
+    ,changeInfo: function(){
+        ui.$updateBtn.on('click',function(){
+            var itemname = ui.$itemname.val();
+            var itemprice = ui.$itemprice.val();
+            var itemhot = ui.$itemhot.val();
+            var itemtype = ui.$itemtype.val();
+            var itembrief = ui.$itembrief.val();
+            var itemcity = ui.$itemcity.val();
+            var itemup = ui.$itemup.val();
+            $.ajax({
+                url: editGoodsInfo,
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    id: id,
+                    itemname: itemname,
+                    itemprice: itemprice,
+                    itemhot: itemhot,
+                    itemtype: itemtype,
+                    itembrief: itembrief,
+                    itemcity: itemcity,
+                    itemup: itemup
+                },
+            })
+            .done(function(data) {
+                console.log(data);
+                $('#myModal').modal('hide');
+                var itemname = data.data.name;
+                var itemprice = data.data.price;
+                var itemhot = data.data.hot;
+                var itemtype = data.data.type;
+                var itembrief = data.data.brief;
+                var itemcity = data.data.city;
+                var itemup = data.data.up;
+                $('.infoId').each(function(){ //将修改的信息显示在对应的页面上
+                    var val = $(this).val();
+                    if(id == val){
+                        var index = $(this).parent().index()+1;
+                        console.log(index)
+                        $('.table2').find('tr').eq(index).find('.tdname').text(itemname);
+                        $('.table2').find('tr').eq(index).find('.tdprice').text(itemprice);
+                        $('.table2').find('tr').eq(index).find('.brief').text(itembrief);
+                        $('.table2').find('tr').eq(index).find('.tdcity').text(itemcity);
+                        if(itemhot == 0){
+                          $('.table2').find('tr').eq(index).find('.tdhot').text('不热销');
+                        }else{
+                          $('.table2').find('tr').eq(index).find('.tdStatus').text('热销');
+                        }
+                        if(itemtype == 0){
+                          $('.table2').find('tr').eq(index).find('.tdtype').text('衣服');
+                        }else if(itemtype == 1){
+                          $('.table2').find('tr').eq(index).find('.tdtype').text('帽子');
+                        }else{
+                          $('.table2').find('tr').eq(index).find('.tdtype').text('皮包');
+                        }
+                        if(itemup == 1){
+                          $('.table2').find('tr').eq(index).find('.tdup').text('上架');
+                        }else{
+                          $('.table2').find('tr').eq(index).find('.tdup').text('下架');
+                        }
+
+                        console.log($(this).parent().index());
+                    }
+                })
+                console.log("success");
+            })
+            .fail(function(data) {
+                 alert(data.data.content);
+            })
+        });
+    }
+	};
+	   oPage.init();
+	});
+
+上述js中的showMask方法就是点击编辑图标，显示遮罩层，并将对应商品id的信息显示在模态框里。
+
+
+
+###控制器中实现修改商品信息的方法：###
+
+     //修改商品内容
+     public function editGoodsInfo(){
+      $itemInfo = M('item');
+      $id = I('post.id');
+      $itemname = I('post.itemname');
+      $itemprice = I('post.itemprice');
+      $itemhot = I('post.itemhot');
+      $itemtype = I('post.itemtype');
+      $itembrief = I('post.itembrief');
+      $itemcity = I('post.itemcity');
+      $itemup = I('post.itemup');
+
+      $data['id'] = $id;
+      $data['name'] = $itemname;
+      $data['price'] = $itemprice;
+      $data['hot'] = $itemhot;
+      $data['type'] = $itemtype;
+      $data['brief'] = $itembrief;
+      $data['city'] = $itemcity;
+      $data['up'] = $itemup;
+
+      if($itemInfo->save($data) == false){ //如果信息修改失败，
+            $data = array(
+                'status' => 0,
+                'content' => '修改信息失败！',
+                'data' => $data,
+           );
+        }else{
+            $OwnInfo = $itemInfo->find($id);
+            $data = array(
+                'status' => 1,
+                'content' => '修改信息成功！',
+                'data' => $OwnInfo,
+            );
+        }
+        $this->ajaxReturn($data);
+    }
+
+
+###前端页面的模态框部分：###
+
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+           aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+              <div class="modal-content">
+                 <div class="modal-header">
+                    <button type="button" class="close"
+                       data-dismiss="modal" aria-hidden="true">
+                          &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                       商品的基本信息
+                    </h4>
+                 </div>
+                     <div class="modal-body">
+                              <div class="form-group">
+                                <label for="name">商品名称</label>
+                                <input type="text" class="form-control itemname">
+                              </div>
+                              <div class="form-group">
+                                <label for="name">商品价格</label>
+                                <input type="text" class="form-control itemprice">
+                              </div>
+                              <div class="form-group">
+                                <label for="name">热销状态</label>
+                                <input type="text" class="form-control itemhot">
+                              </div>
+                              <div class="form-group">
+                                <label for="name">商品类型</label>
+                                <input type="text" class="form-control itemtype">
+                              </div>
+                              <div class="form-group">
+                                <label for="name">商品描述</label>
+                                <input type="text" class="form-control itembrief">
+                              </div>
+                              <div class="form-group">
+                                <label for="name">商品产地</label>
+                                <input type="text" class="form-control itemcity">
+                              </div>
+                              <div class="form-group">
+                                <label for="name">上架状态</label>
+                                <input type="text" class="form-control itemup">
+                              </div>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                           data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary updateBtn">
+                           修改
+                        </button>
+                     </div>
+              </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+上述goodsInfo.js中的changeInfo方法就是修改信息后，点击修改，隐藏遮罩层，将修改后的数据即时的显示在商品信息列表里。
+
+
+> 于2017.5.7小记....感觉功能完善的差不多啦，收尾！！
+
+
+
+----------------------------------
+
+
 **2017年5月2号，续前面所写内容继续更新**
 
 --------系统存在的一个问题解决啦!开心O(∩_∩)O~~-----

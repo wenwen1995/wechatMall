@@ -22,11 +22,11 @@
     <link href="/thinkphp/Public/assets/css/custom.css" rel="stylesheet" />
 </head>
 <body>
-    <?php if(count($_SESSION['admin_info']) == 0) {?>
+    <!-- <?php if(count($_SESSION['admin_info']) == 0) {?>
      <script>
          window.reload();
      </script>
-    <?php }else{ ?>
+    <?php }else{ ?> -->
      <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="adjust-nav">
             <div class="navbar-header">
@@ -51,15 +51,21 @@
                         <a href="<?php echo U('Page/welcome');?>"><i class="fa fa-leaf "></i>首页</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('Page/adPage');?>"><i class="fa fa-edit "></i>广告图管理 </a>
+                        <a href="<?php echo U('Page/adPage');?>"><i class="fa fa-edit "></i>广告图信息上传</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('Page/goodsPage');?>"><i class="fa fa-table "></i>商品信息管理</a>
+                        <a href="<?php echo U('Info/adInfo');?>"><i class="fa fa-coffee "></i>广告图信息管理</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo U('Page/goodsPage');?>"><i class="fa fa-smile-o "></i>商品信息上传</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo U('Info/goodsInfo');?>"><i class="fa fa-beer "></i>商品信息管理</a>
                     </li>
                 </ul>
             </div>
         </nav>
-<?php } ?>
+<!-- <?php } ?> -->
     <script>
         var url ="<?php echo U('Page/destory');?>";
     </script>
@@ -81,7 +87,7 @@
                 <div class="ad">
                     <div class="row" >
                         <div class="col-md-12">
-                         <h2>广告图管理</h2>
+                         <h2>广告图信息上传</h2>
                          <hr />
                         </div>
                     </div>

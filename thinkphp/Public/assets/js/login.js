@@ -57,29 +57,6 @@ var oPage = {
                         }
                     },'json'
                 );
-
-                // $.ajax({
-                //     type: 'POST',
-                //     url: 'http://localhost/thinkphp/index.php/Index/index',
-                //     dataType: 'json',
-                //     data: {
-                //         'username':username,
-                //         'userpwd': userpwd
-                //     },
-                //     success: function(data) {
-                //         // alert("发表成功！");
-                //         console.log(data.status);
-                //         if(data.status == 1){//表示添加成功
-                //             alert("登录成功！");
-                //             window.location.href = data.callback;
-                //         }else{
-                //            alert(data.msg); 
-                //         }
-                //     },
-                //     error: function(data) {
-                //         console.log('error')
-                //     },
-                //  });
             }
     }
     ,focusEmpty:function(self){

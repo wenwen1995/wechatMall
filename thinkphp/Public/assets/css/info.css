@@ -8,6 +8,11 @@
   height: 0;
   content: '';
 }
+.welPic{
+	display: block;
+    width: 860px;
+    margin: 0 auto;
+}
 .adInfo,.goodsInfo{
 	width: 510px;
 	margin:0 auto;
@@ -82,4 +87,53 @@
 .uploadify:hover .uploadify-button{
 	background:#0A91FF;
 	color:#fff;
+}
+.table1 tr,.table1 th,
+.table2 tr,.table2 th{
+	text-align: center;
+}
+.table2{
+	table-layout:fixed;
+}
+.brief,.tdname,.tdpicname{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.edit{
+	width:20px;
+	height: 20px;
+}
+/*分页效果*/
+.pages{
+	text-align:center;
+}
+.rows{
+	padding-left: 20px;
+}
+.pages a,.pages span {
+    display:inline-block;
+    padding:2px 5px;
+    margin:0 6px;
+    border:1px solid #f0f0f0;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+.pages a,.pages li {
+    display:inline-block;
+    list-style: none;
+    text-decoration:none; color:#58A0D3;
+}
+.pages a.first,.pages a.prev,.pages a.next,.pages a.end{
+    margin:0;
+}
+.pages a:hover{
+    border-color:#50A8E6;
+}
+.pages span.current{
+    background:#50A8E6;
+    color:#FFF;
+    font-weight:700;
+    border-color:#50A8E6;
 }

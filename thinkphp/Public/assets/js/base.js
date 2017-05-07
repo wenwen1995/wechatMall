@@ -23,15 +23,6 @@ var oPage = {
                 console.log($(this).index());
             })
         });
-
-        ui.$logoutSpan.on('click',function(){
-            $.post(
-                    url,
-                    { },
-                    function(data){
-                    },'json'
-             );
-        });
     }
 };
    oPage.init();

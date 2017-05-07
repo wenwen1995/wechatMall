@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>后台管理之广告信息管理界面</title>
+    <link href="__css__/info.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <!-- 页面底部 -->
+        <include file="./Public/common/page.html" />
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <!-- 广告图信息管理 -->
+                <div class="welcome">
+                    <div class="row" >
+                        <div class="col-md-12">
+                         <h2>广告图信息管理</h2>
+                         <hr />
+                        </div>
+                    </div>
+                </div>
+                <div class="adManage col-md-12">
+                    <table class="table1 table table-striped">
+                      <thead>
+                        <tr>
+                          <th>图片名称</th>
+                          <th>描述语1</th>
+                          <th>描述语2</th>
+                          <th>推荐状态</th>
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <volist name="adInfo" id="vo">
+                            <tr>
+                              <input type="hidden" value="{$vo.id}" class="infoId">
+                              <td>{$vo.ad_img}</td>
+                              <td class="tdDesc1">{$vo.desc1}</td>
+                              <td class="tdDesc2">{$vo.desc2}</td>
+                              <if condition="($vo.status eq 0)"> 
+                                  <td class="tdStatus">不推荐</td>
+                                  <else/><td class="tdStatus">推荐</td>
+                              </if>
+                              <td><img class="edit" src="__img__/edit.png" data-toggle="modal" data-target="#myModal"></td>
+                            </tr>
+                        </volist>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+           aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+              <div class="modal-content">
+                 <div class="modal-header">
+                    <button type="button" class="close"
+                       data-dismiss="modal" aria-hidden="true">
+                          &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                       广告图基本信息
+                    </h4>
+                 </div>
+                     <div class="modal-body">
+                              <div class="form-group">
+                                <label for="name">广告图描述语1</label>
+                                <input type="text" class="form-control desc1">
+                              </div>
+                              <div class="form-group">
+                                <label for="name">广告图描述语2</label>
+                                <input type="text" class="form-control desc2">
+                              </div>
+                              <div class="form-group">
+                                <label for="name">推荐状态</label>
+                                <input type="text" class="form-control status">
+                              </div>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                           data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary updateBtn">
+                           修改
+                        </button>
+                     </div>
+              </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    </div>
+    <script>
+        var showOwnUrl = "{:U('Info/adShowOwnInfo')}";
+        var editAdInfo =  "{:U('Info/editAdInfo')}";
+    </script>
+    <script src="__js__/base.js"></script>
+    <script src="__js__/adInfo.js"></script>
+</body>
+</html>

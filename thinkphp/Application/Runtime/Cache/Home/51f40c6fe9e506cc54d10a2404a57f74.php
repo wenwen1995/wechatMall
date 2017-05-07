@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>后台管理之欢迎界面</title>
+    <title>后台管理之广告信息添加界面</title>
     <link href="/thinkphp/Public/assets/css/info.css" rel="stylesheet" />
 </head>
 <body>
@@ -52,13 +52,13 @@
                         <a href="<?php echo U('Page/adPage');?>"><i class="fa fa-edit "></i>广告图信息上传</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('Info/adInfo');?>"><i class="fa fa-coffee "></i>广告图信息管理</a>
+                        <a href="<?php echo U('Info/adInfo');?>"><i class="fa fa-table "></i>广告图信息管理</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('Page/goodsPage');?>"><i class="fa fa-smile-o "></i>商品信息上传</a>
+                        <a href="<?php echo U('Page/goodsPage');?>"><i class="fa fa-edit "></i>商品信息上传</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('Info/goodsInfo');?>"><i class="fa fa-beer "></i>商品信息管理</a>
+                        <a href="<?php echo U('Info/goodsInfo');?>"><i class="fa fa-table "></i>商品信息管理</a>
                     </li>
                 </ul>
             </div>
@@ -77,22 +77,51 @@
 </body>
 </html>
 
-        <!-- /. NAV SIDE  -->
-        <div id="page-wrapper" >
-            <div id="page-inner">
-                <!-- 首页 -->
-                <div class="welcome">
-                    <div class="row" >
-                        <div class="col-md-12">
-                         <h2>欢迎来到爱丽小屋后台管理系统!</h2>
-                         <hr />
-                        </div>
-                    </div>
-                </div>
-                <img class="welPic" src="/thinkphp/Public/assets/image/welcome.jpg">
-            </div>
-        </div>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+           aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+              <div class="modal-content">
+                 <div class="modal-header">
+                    <button type="button" class="close"
+                       data-dismiss="modal" aria-hidden="true">
+                          &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                       广告图基本信息
+                    </h4>
+                 </div>
+                 <div class="modal-body">
+                      <input type="hidden" value="<?php echo ($OwnInfo["id"]); ?>" class="infoId">
+                      <div class="form-group">
+                        <label for="name">广告图描述语1</label>
+                        <input type="text" class="form-control" value="<?php echo ($OwnInfo["desc1"]); ?>">
+                      </div>
+                      <div class="form-group">
+                        <label for="name">广告图描述语2</label>
+                        <input type="text" class="form-control" value="<?php echo ($OwnInfo["desc2"]); ?>">
+                      </div>
+                      <div class="form-group">
+                        <label for="name">推荐状态</label>
+                        <input type="text" class="form-control" value="<?php echo ($OwnInfo["status"]); ?>">
+                      </div>
+                 </div>
+                 <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                       data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                       修改
+                    </button>
+                 </div>
+              </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
     </div>
+    </div>
+    <script>
+        var showOwnUrl = "<?php echo U('Info/adShowOwnInfo');?>";
+    </script>
     <script src="/thinkphp/Public/assets/js/base.js"></script>
+    <script src="/thinkphp/Public/assets/js/adInfo.js"></script>
 </body>
 </html>
