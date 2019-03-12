@@ -12,23 +12,23 @@
 
 广告图信息管理：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-5-7/19019151-file_1494120430798_1055b.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-7/19019151-file_1494120430798_1055b.png)
 
 点击对应的编辑图标，可进行对应内容的修改：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-5-7/6364087-file_1494120433448_a840.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-7/6364087-file_1494120433448_a840.png)
 
 商品信息管理（**这里实现了分页！**）：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-5-7/83480337-file_1494120436010_541e.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-7/83480337-file_1494120436010_541e.png)
 
 点击对应的编辑图标，可进行对应内容的修改：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-5-7/13774047-file_1494120438525_ff40.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-7/13774047-file_1494120438525_ff40.png)
 
 效果还不错吧，这里表格样式使用的是bootstrap的：**table-striped**，然后弹出层使用的是bootstrap的**模态框**，分页的效果是仿照网上写的。
 
-![](http://om4hi8hop.bkt.clouddn.com/17-5-7/84704171-file_1494122004841_86d1.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-7/84704171-file_1494122004841_86d1.png)
 
 这里**Application/Common/Common/function.php**里面是实现分页的方法
 
@@ -469,7 +469,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
 其中获得灵感思路的来自于这篇链接，写的不错：[http://blog.csdn.net/freeape/article/details/49467551](http://blog.csdn.net/freeape/article/details/49467551)
 
 来看一下最终实现的代码吧，all.html包含输入框这部分和中间这个显示内容的大div:
-![](http://om4hi8hop.bkt.clouddn.com/17-5-2/66300172-file_1493705730079_4c40.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-2/66300172-file_1493705730079_4c40.png)
 
 对应的all.js是这样写的：
 
@@ -625,7 +625,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
 
 看一下最终显示的结果：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-5-2/31455171-file_1493703851551_1e81.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-2/31455171-file_1493703851551_1e81.png)
 
 没有搜到合适的商品时，显示如下，之后再通过语句
 
@@ -635,14 +635,14 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
 
 搜到合适的商品，显示出来，这里侧边console台我打印了返回的结果信息：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-5-2/45767516-file_1493703935918_f07f.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-2/45767516-file_1493703935918_f07f.png)
 
 最后动图演示一下，（这里不知道为什么，用GifGam录制时，chrome浏览器模拟的手机界面的那个点击的小图标在生成gif后，不见了。。），但是完成功能还是好开心~哈哈哈：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-5-2/59212108-file_1493704698447_ee87.gif)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-2/59212108-file_1493704698447_ee87.gif)
 
 
-![](http://om4hi8hop.bkt.clouddn.com/17-5-2/96431845-file_1493704709626_119b3.gif)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-5-2/96431845-file_1493704709626_119b3.gif)
 
 -----------------------------------
 
@@ -889,11 +889,11 @@ OAuth允许用户提供一个令牌，而不是用户名和密码来访问他们
 
 此时微信界面上显示是这样的：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-4-25/30491457-file_1493099067437_13e23.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-4-25/30491457-file_1493099067437_13e23.png)
 
 此时点击链接进去，如果获取到了用户信息，则会打印出所获得的信息：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-4-25/60535919-file_1493099105704_17b45.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-4-25/60535919-file_1493099105704_17b45.png)
 
 反之，如果中间有错误的话，则要根据错误一遍遍的排查错误，找出错误原因，逐个解决。
 
@@ -902,11 +902,11 @@ OAuth允许用户提供一个令牌，而不是用户名和密码来访问他们
 
 1. 所以首先把它们放在config.php中，通过C()方法进行获取。就像这样：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-4-25/25070492-file_1493099181836_798a.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-4-25/25070492-file_1493099181836_798a.png)
 
 2. 与此对应的文件放的位置在这里：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-4-25/25503346-file_1493099522058_a816.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-4-25/25503346-file_1493099522058_a816.png)
 
 **OauthController.class.php中代码如下，它的作用是实现点击底部菜单时，就静默获取到用户的信息，并把它存到一个session里**
 
@@ -996,10 +996,10 @@ OAuth允许用户提供一个令牌，而不是用户名和密码来访问他们
 
 在Wxauth.class.php中，因为文件放的目录结构发生了变化，所以，在其头部加了2句代码，其次因为现在token,appid,appsecret定义在config.php里，所以参数是能被公共访问到的，将原来的private改为了public,如下图：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-4-25/82830688-file_1493100251894_183b8.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-4-25/82830688-file_1493100251894_183b8.png)
 
 同理，因为这2个文件的目录结构发生了变化，
-![](http://om4hi8hop.bkt.clouddn.com/17-4-25/87905984-file_1493100405436_175c8.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-4-25/87905984-file_1493100405436_175c8.png)
 
 也在它们的头部加上这句
 
@@ -1030,7 +1030,7 @@ OAuth允许用户提供一个令牌，而不是用户名和密码来访问他们
 
 对应的目录结构是这样的：
 
-![](http://om4hi8hop.bkt.clouddn.com/17-4-25/87604589-file_1493101624122_16df7.png)
+![](https://wrapper-1258672812.cos.ap-chengdu.myqcloud.com/17-4-25/87604589-file_1493101624122_16df7.png)
 
 PageController.class.php里有个为广告图上传**adUploadify方法**，
 
