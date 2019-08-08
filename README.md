@@ -60,7 +60,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
 	?>
 
 
-###控制器中实现商品信息管理页面分页的方法：###
+### 控制器中实现商品信息管理页面分页的方法：
     
     //显示商品信息列表
     public function goodsInfo(){
@@ -75,7 +75,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
     }
 
 
-###前端分页页面展示：###
+### 前端分页页面展示：
 
      <!-- 分页 -->
      <div class="page">
@@ -84,7 +84,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
        </div>
      </div>
 
-###对应的css样式：###
+### 对应的css样式
 
     /*分页效果*/
 	.pages{
@@ -123,7 +123,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
 最终分页效果就是如之前的图片所示了，这里分页参考的是这个链接，基本仿照来写的，写的很好很清楚：
 [http://www.cnblogs.com/tianguook/p/4326613.html](http://www.cnblogs.com/tianguook/p/4326613.html)
 
-###控制器中实现点击编辑，显示对应商品信息的方法：###
+### 控制器中实现点击编辑，显示对应商品信息的方法：
 
     //显示对应id的数据内容
      public function goodsShowOwnInfo(){
@@ -148,7 +148,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
 
 这里前端页面在商品列表展示时，有个**隐藏的包含商品id值的input框**，当点击编辑时，将此id值通过ajax传给后台，后台根据此id值找到唯一的这条记录，并将其返回，通过js将返回的数据渲染在页面上。
 
-###前端页面:###
+### 前端页面:
 
      <div class="adManage col-md-12">
                     <table class="table2 table table-striped">
@@ -204,7 +204,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
 
 上述代码中class="infoId"就是含有商品id值的隐藏的input框。
 
-###对应的goodsInfo.js：###
+### 对应的goodsInfo.js：
 
     /*
     goodsInfo.js
@@ -346,8 +346,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
 上述js中的showMask方法就是点击编辑图标，显示遮罩层，并将对应商品id的信息显示在模态框里。
 
 
-
-###控制器中实现修改商品信息的方法：###
+### 控制器中实现修改商品信息的方法：
 
      //修改商品内容
      public function editGoodsInfo(){
@@ -388,7 +387,7 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
     }
 
 
-###前端页面的模态框部分：###
+### 前端页面的模态框部分：
 
         <!-- 模态框（Modal） -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -688,12 +687,11 @@ Info文件夹下的  **adInfo.html->广告图信息管理页面**、**goodsInfo.
 ![](http://i1.piimg.com/567571/e2dd66390a02442e.png)
 
 
-###这里来看一下具体实现了哪些功能： ###
+### 这里来看一下具体实现了哪些功能：
 
 1. 爱丽小屋服装销售系统移动端功能框图
 
 ![](http://i2.muimg.com/567571/3f48c27e65a2bfa7.png)
-
 
    
 2. 后台管理系统PC端功能框图
@@ -1273,7 +1271,6 @@ adPage.js代码：
 
 以上就是做的过程中所出现的问题和解决方法，总结的差不多啦~
 
-##  ##
 
 
 ## 系统还存在哪些缺陷及更好的解决方法？ ##
